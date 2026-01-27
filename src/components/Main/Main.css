@@ -1,7 +1,30 @@
 .cards {
-  background-color: #fff;
+  background-color: #f5f6f7;
+  padding-bottom: 56px;
 }
 
 .cards__text {
   color: #212121;
+  font-size: 40px;
+  margin: 0;
+  padding: 80px 104px;
+}
+
+.cards__list {
+  padding: 0 104px;
+  margin: 0;
+  /* display: flex;
+  list-style-type: none; */
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards__btn {
+  border-radius: 80px;
+  width: 288px;
+  height: 64px;
+  border: none;
+  position: relative;
+  left: 576px;
 }

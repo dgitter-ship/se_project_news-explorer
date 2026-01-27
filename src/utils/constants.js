@@ -1,6 +1,4 @@
-const apiKey = "0cdac1d52f11499fa45799c7ea450624";
-
-const defaultArticles = [
+export const defaultArticles = [
   {
     id: "bbc-news",
     name: "BBC News",

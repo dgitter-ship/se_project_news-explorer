@@ -1,6 +1,14 @@
+import { useState } from "react";
 import "./SearchForm.css";
 
-function SearchForm({}) {
+function SearchForm({ handleSearch }) {
+  const [inputValue, setInputValue] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleSearch(inputValue);
+  };
+
   return (
     <>
       <section className="form">
@@ -10,11 +18,12 @@ function SearchForm({}) {
         <h2 className="form__content">
           Find the news on any topic and save them in your personal account
         </h2>
-        <form className="form__searchbar">
+        <form onSubmit={onSubmit} className="form__searchbar">
           <input
             type="search"
             className="form__input"
             placeholder="Yellowstone"
+            onChange={(e) => setInputValue(e.target.value)}
           />
           <button type="submit" className="form__submit-btn">
             Search

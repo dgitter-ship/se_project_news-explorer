@@ -1,4 +1,10 @@
 .page__content {
   background-image: url(../../assets/backgroundImg.svg);
   background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page__content--no-background {
+  background-image: none;
 }

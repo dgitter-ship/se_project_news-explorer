@@ -1,0 +1,10 @@
+.saved-news__header {
+  background-color: #fff;
+  display: flex;
+  gap: 765px;
+  align-items: center;
+  padding: 0 104px;
+}
+.saved-news__content {
+  background-color: #fff;
+}
