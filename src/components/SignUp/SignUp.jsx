@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SignUp.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function SignUp({ isOpen, onSignInClick, onCloseClick }) {
+function SignUp({ isOpen, onSignInClick, onCloseClick, onSignUp }) {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -17,15 +17,25 @@ function SignUp({ isOpen, onSignInClick, onCloseClick }) {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    onSignUp(data);
+    setData({
+      email: "",
+      password: "",
+      name: "",
+    });
+  };
+
   return (
     <ModalWithForm
       title="Sign up"
       buttonText="Sign up"
-      //   activeModal={activeModal}
       onCloseClick={onCloseClick}
       isOpen={isOpen}
-      //   onSubmit={handleSubmit}
-      secondBtn="or Sign in"
+      onSubmit={handleSubmit}
+      secondBtn="Sign in"
       onSecondaryClick={onSignInClick}
     >
       <label htmlFor="email-signup" className="modal__label">
@@ -38,6 +48,7 @@ function SignUp({ isOpen, onSignInClick, onCloseClick }) {
           placeholder="Email"
           onChange={handleChange}
           value={data.email}
+          required
         />
       </label>
       <label htmlFor="password-signup" className="modal__label">
@@ -50,6 +61,7 @@ function SignUp({ isOpen, onSignInClick, onCloseClick }) {
           placeholder="Password"
           onChange={handleChange}
           value={data.password}
+          required
         />
       </label>
       <label htmlFor="name-signup" className="modal__label">
@@ -60,8 +72,9 @@ function SignUp({ isOpen, onSignInClick, onCloseClick }) {
           id="username-signup"
           placeholder="Name"
           name="name"
-          value={data.username}
+          value={data.name}
           onChange={handleChange}
+          required
         />
       </label>
     </ModalWithForm>

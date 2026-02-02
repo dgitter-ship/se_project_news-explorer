@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 320px) {
+  .page__content {
+    min-width: none;
+  }
+}
+
 .page__content--no-background {
   background-image: none;
 }

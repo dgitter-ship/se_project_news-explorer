@@ -4,7 +4,43 @@
   gap: 765px;
   align-items: center;
   padding: 0 104px;
+  border-bottom: 1px solid lightgrey;
 }
+
 .saved-news__content {
   background-color: #fff;
+}
+
+.saved-news__title {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #1a1b2280;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.saved-news__message {
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0px;
+  margin: 0;
+  padding-top: 28px;
+}
+
+.saved-news__keywords {
+  color: black;
+}
+
+.saved-news__list {
+  padding: 0 104px;
+  margin: 0;
+  list-style-type: none;
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

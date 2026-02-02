@@ -27,7 +27,7 @@ function SignIn({ isOpen, onCloseClick, onSignUpClick, onSignIn }) {
       isOpen={isOpen}
       title="Sign in"
       buttonText="Sign in"
-      secondBtn=" or Sign up"
+      secondBtn="Sign up"
       onCloseClick={onCloseClick}
       onSecondaryClick={onSignUpClick}
       onSubmit={handleSubmit}
@@ -42,6 +42,7 @@ function SignIn({ isOpen, onCloseClick, onSignUpClick, onSignIn }) {
           value={data.email}
           placeholder="Email"
           onChange={handleChange}
+          required
         />
       </label>
       <label htmlFor="password" className="modal__label">
@@ -54,6 +55,7 @@ function SignIn({ isOpen, onCloseClick, onSignUpClick, onSignIn }) {
           placeholder="Password"
           value={data.password}
           onChange={handleChange}
+          required
         />
       </label>
     </ModalWithForm>

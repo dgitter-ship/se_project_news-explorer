@@ -35,7 +35,7 @@ function ModalWithForm({
                 className="modal__submit-btn modal__submit_secondary-btn"
                 onClick={onSecondaryClick}
               >
-                {secondBtn}
+                or <span className="modal__secondary-action">{secondBtn}</span>
               </button>
             )}
           </div>

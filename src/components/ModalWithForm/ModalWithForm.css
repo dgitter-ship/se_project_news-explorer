@@ -19,15 +19,16 @@
   background-color: white;
   position: relative;
   padding: 28px 28px 36px;
-  max-width: 496px;
+  max-width: 430px;
   box-sizing: border-box;
   width: 100%;
+  border-radius: 16px;
 }
 
 .modal__title {
   margin: 0;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 24px;
   line-height: 20px;
   padding: 0 0 24px;
 }
@@ -35,9 +36,9 @@
 .modal__close-btn {
   background: none;
   border: none;
-  position: absolute;
-  left: 500px;
-  bottom: 300px;
+  position: relative;
+  left: 400px;
+  bottom: 112px;
 }
 
 .modal__form {
@@ -61,26 +62,54 @@
   border-left: 0;
   border-right: 0px;
   width: 100%;
+  color: #000000;
 }
 
 .modal__btns {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal__submit-btn {
-  max-width: 124px;
   height: 36px;
   border-radius: 4px;
   background-color: #0000004d;
-  color: white;
+
   border: none;
-  max-width: 128px;
-  height: 36px;
+
+  height: 64px;
   white-space: nowrap;
+  width: 358px;
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  font-size: 18px;
+  border-radius: 100px;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
+  background-color: #2f71e5;
+  color: #ffffff;
 }
 
 .modal__submit_secondary-btn {
   border: none;
-  color: #00000080;
+  color: #000000;
   background-color: transparent;
+  font-size: 14px;
+}
+
+.modal__submit_secondary-btn:hover {
+  color: #000000;
+}
+
+.modal__submit_secondary-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+}
+
+.modal__secondary-action {
+  color: #2f71e5;
 }

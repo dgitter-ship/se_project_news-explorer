@@ -28,3 +28,36 @@
 
   margin: 0;
 }
+
+@media screen and (max-width: 320px) {
+  .about__section {
+    flex-direction: column;
+    min-height: 764px;
+    top: 40px;
+  }
+
+  .about__image {
+    width: 272px;
+    height: 272px;
+    padding: 0;
+    position: relative;
+    top: 30px;
+  }
+
+  .about__section-content {
+    align-items: baseline;
+    text-align: left;
+  }
+
+  .about__section-title {
+    padding-top: 40px;
+    font-size: 30px;
+    line-height: 28px;
+  }
+
+  .about__section-text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

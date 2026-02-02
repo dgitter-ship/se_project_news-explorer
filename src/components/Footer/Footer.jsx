@@ -1,22 +1,31 @@
 import "./Footer.css";
 import link from "../../assets/footer-link.svg";
 import linkedin from "../../assets/linkedinicon.svg";
+import { Link } from "react-router-dom";
 
 function Footer({}) {
   return (
     <div className="footer">
       <p className="footer__text">© 2026 Supersite, Powered by News API</p>
+
       <div className="footer__btns">
-        <button className="footer__btn">Home</button>
-        <button className="footer__btn">Tripleten</button>
+        <Link to="/">
+          <button className="footer__btn">Home</button>
+        </Link>
+        <a href="https://www.tripleten.com">
+          <button className="footer__btn">Tripleten</button>
+        </a>
       </div>
       <div className="footer__links">
+        <a href="https://www.github.com/dgitter-ship "></a>
         <button className="footer__link-btn">
           <img src={link} alt="" className="footer__link" />
         </button>
-        <button className="footer__link-btn">
-          <img src={linkedin} alt="" className="footer__link" />
-        </button>
+        <a href="https://www.linkedin.com/in/devin-protain-24a138166">
+          <button className="footer__link-btn">
+            <img src={linkedin} alt="" className="footer__link" />
+          </button>
+        </a>
       </div>
     </div>
   );

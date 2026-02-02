@@ -1,10 +1,12 @@
 import "./Header.css";
 import Navigation from "../Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 function Header({ onSignInClick, isLoggedIn, userData, handleSignOut }) {
   return (
     <header className="header">
       <h1 className="header__logo">NewsExplorer</h1>
+
       <Navigation
         onSignInClick={onSignInClick}
         isLoggedIn={isLoggedIn}

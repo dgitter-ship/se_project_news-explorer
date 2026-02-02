@@ -10,11 +10,39 @@
   padding: 80px 104px;
 }
 
+.cards__nothing-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 64px;
+}
+.cards__nothing-found_img {
+  width: 83px;
+  padding: 86px 0 31px;
+}
+
+.cards__nothing-found_caption {
+  font-size: 26px;
+  color: #212121;
+  margin: 0;
+  font-family: Roboto Slab;
+  font-weight: 400;
+}
+
+.cards__nothing-found_text {
+  font-family: Roboto;
+  font-size: 18px;
+  color: #6c707a;
+  margin: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
 .cards__list {
   padding: 0 104px;
   margin: 0;
-  /* display: flex;
-  list-style-type: none; */
+  list-style-type: none;
   gap: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -27,4 +55,7 @@
   border: none;
   position: relative;
   left: 576px;
+}
+
+@media screen and (max-width: 627px) {
 }

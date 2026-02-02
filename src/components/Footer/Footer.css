@@ -5,12 +5,14 @@
 .footer__text {
   margin: 0;
   padding: 32px 540px 36px 104px;
+  color: #b6bcbf;
 }
 
 .footer__btns {
   display: flex;
   gap: 40px;
   padding-right: 42px;
+  align-items: center;
 }
 
 .footer__btn {
@@ -21,9 +23,39 @@
 .footer__links {
   display: flex;
   gap: 26px;
+  align-items: center;
 }
 
 .footer__link-btn {
   border: none;
   background-color: transparent;
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    flex-direction: column-reverse;
+
+    gap: 16px;
+  }
+
+  .footer__text {
+    padding: 16px 0 0 0;
+    text-align: center;
+    color: #b6bcbf;
+  }
+
+  .footer__btns {
+    padding: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .footer__links {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 39px;
+  }
 }

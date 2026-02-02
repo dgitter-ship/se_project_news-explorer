@@ -1,0 +1,140 @@
+.navigation__menu {
+  visibility: hidden;
+}
+
+.navigation__btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  visibility: visible;
+}
+
+.navigation__home-btn {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  color: white;
+  border: none;
+  position: relative;
+}
+
+.navigation__home-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.navigation__home-btn--saved {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+
+  color: black;
+}
+
+.navigation__saved-articles-btn {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  background-color: transparent;
+  color: #b6bcbf;
+  border: none;
+}
+
+.navigation__saved-articles-btn--saved {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  background-color: transparent;
+  color: #b6bcbf;
+  border: none;
+}
+
+.navigation__saved-articles-btn--saved::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.navigation__signout-btn {
+  border-radius: 100px;
+  width: 112px;
+  height: 48px;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-color: #fff;
+}
+
+.navigation__signout-btn--saved {
+  color: black;
+}
+
+.navigation__signin-btn {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  color: white;
+  width: 176px;
+
+  border-radius: 100px;
+  height: 48px;
+  background-color: transparent;
+
+  border-color: white;
+}
+
+@media screen and (max-width: 360px) {
+  .navigation__menu {
+    visibility: visible;
+    background-color: transparent;
+    position: absolute;
+    top: 16px;
+    border: none;
+  }
+
+  .navigation__btns {
+    visibility: hidden;
+  }
+}

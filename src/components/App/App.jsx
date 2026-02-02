@@ -18,18 +18,37 @@ function App() {
   const [errorMessage, setErrorMessage] = useState("");
   const [articles, setArticles] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
-  const [userData, setUserData] = useState({ email: "", password: "" });
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    name: "",
+  });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [savedArticles, setSavedArticles] = useState([]);
+
+  const handleSaveArticle = (article) => {
+    setSavedArticles((prevSavedArticles) => [...prevSavedArticles, article]);
+  };
 
   const handleSignOut = () => {
     setIsLoggedIn(false);
-    setUserData({ email: "", password: "" });
+    setUserData({ email: "", password: "", name: "" });
   };
 
   const handleLogin = (userData) => {
     setIsLoggedIn(true);
     setUserData(userData);
     closeActiveModal();
+  };
+
+  const handleSignUp = (signUpData) => {
+    setUserData({ email: signUpData.email, name: signUpData.name });
+    setIsLoggedIn(true);
+    closeActiveModal();
+  };
+
+  const handleRemoveArticle = (article) => {
+    setSavedArticles(savedArticles.filter((a) => a.url !== article.url));
   };
 
   const onSignUpClick = () => {
@@ -104,6 +123,7 @@ function App() {
                 isLoading={isLoading}
                 articles={articles}
                 errorMessage={errorMessage}
+                onSaveArticle={handleSaveArticle}
               />
             }
           />
@@ -114,6 +134,8 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 userData={userData}
                 handleSignOut={handleSignOut}
+                savedArticles={savedArticles}
+                onRemoveArticle={handleRemoveArticle}
               />
             }
           />
@@ -129,6 +151,7 @@ function App() {
           isOpen={activeModal === "Sign up"}
           onCloseClick={closeActiveModal}
           onSignInClick={onSignInClick}
+          onSignUp={handleSignUp}
         />
 
         <Footer />
