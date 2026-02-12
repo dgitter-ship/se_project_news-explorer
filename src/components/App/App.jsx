@@ -27,9 +27,12 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
 
   const handleSaveArticle = (article) => {
-    setSavedArticles((prevSavedArticles) => [...prevSavedArticles, article]);
+    setSavedArticles((prevSavedArticles) => [
+      ...prevSavedArticles,
+      { ...article, searchTerm },
+    ]);
   };
-
+  console.log("Saved articles:", savedArticles);
   const handleSignOut = () => {
     setIsLoggedIn(false);
     setUserData({ email: "", password: "", name: "" });
@@ -111,6 +114,8 @@ function App() {
             isLoggedIn={isLoggedIn}
             userData={userData}
             handleSignOut={handleSignOut}
+            activeModal={activeModal}
+            onCloseClick={closeActiveModal}
           />
         )}
         <Routes>
@@ -124,6 +129,7 @@ function App() {
                 articles={articles}
                 errorMessage={errorMessage}
                 onSaveArticle={handleSaveArticle}
+                setSearchTerm={setSearchTerm}
               />
             }
           />
@@ -136,6 +142,7 @@ function App() {
                 handleSignOut={handleSignOut}
                 savedArticles={savedArticles}
                 onRemoveArticle={handleRemoveArticle}
+                activeModal={activeModal}
               />
             }
           />

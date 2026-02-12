@@ -6,6 +6,12 @@
   margin: 0;
   padding: 32px 540px 36px 104px;
   color: #b6bcbf;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+  line-height: 22px;
+  letter-spacing: 0px;
 }
 
 .footer__btns {
@@ -18,6 +24,12 @@
 .footer__btn {
   border: none;
   background-color: transparent;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .footer__links {
@@ -31,7 +43,7 @@
   background-color: transparent;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .footer {
     flex-direction: column-reverse;
 

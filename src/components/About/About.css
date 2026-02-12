@@ -10,6 +10,7 @@
   width: 464px;
   height: 464px;
   padding: 80px 56px 80px 104px;
+  border-radius: 100%;
 }
 
 .about__section-content {
@@ -21,19 +22,36 @@
 .about__section-title {
   margin: 0;
   padding-top: 141px;
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0px;
 }
 
 .about__section-text {
   width: 600px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 24px;
+  letter-spacing: 0px;
 
   margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .about__section {
     flex-direction: column;
     min-height: 764px;
     top: 40px;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about__section-title {
+    font-size: 30px;
   }
 
   .about__image {
@@ -42,11 +60,13 @@
     padding: 0;
     position: relative;
     top: 30px;
+    padding-bottom: 24px;
   }
 
   .about__section-content {
     align-items: baseline;
     text-align: left;
+    width: 288px;
   }
 
   .about__section-title {

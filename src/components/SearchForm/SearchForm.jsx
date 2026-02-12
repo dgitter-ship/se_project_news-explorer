@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./SearchForm.css";
 
-function SearchForm({ handleSearch }) {
+function SearchForm({ handleSearch, setSearchTerm }) {
   const [inputValue, setInputValue] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     handleSearch(inputValue);
+    setSearchTerm(inputValue);
   };
 
   return (

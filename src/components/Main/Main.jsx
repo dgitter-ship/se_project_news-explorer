@@ -14,6 +14,7 @@ function Main({
   articles,
   errorMessage,
   onSaveArticle,
+  setSearchTerm,
 }) {
   const [visibleCards, setVisibleCards] = useState(3);
   const [savedArticles, setSavedArticles] = useState([]);
@@ -33,7 +34,7 @@ function Main({
 
   return (
     <main>
-      <SearchForm handleSearch={handleSearch} />
+      <SearchForm handleSearch={handleSearch} setSearchTerm={setSearchTerm} />
       {hasSearched && (
         <section className="cards">
           {!errorMessage && <p className="cards__text">Search results</p>}
@@ -42,9 +43,15 @@ function Main({
 
           {!isLoading && errorMessage && (
             <div className="cards__nothing-found">
-              <img src={notFoundImg} alt="Nothing Found Image" className="cards__nothing-found_img" />
+              <img
+                src={notFoundImg}
+                alt="Nothing Found Image"
+                className="cards__nothing-found_img"
+              />
               <h2 className="cards__nothing-found_caption">Nothing found</h2>
-              <p className="cards__nothing-found_text">Sorry, but nothing matched <br></br> your search terms.</p>
+              <p className="cards__nothing-found_text">
+                Sorry, but nothing matched <br></br> your search terms.
+              </p>
             </div>
           )}
 
@@ -81,7 +88,6 @@ function Main({
           )}
         </section>
       )}
-      ;
       <About />
     </main>
   );

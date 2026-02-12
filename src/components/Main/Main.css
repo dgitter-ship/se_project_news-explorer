@@ -7,7 +7,7 @@
   color: #212121;
   font-size: 40px;
   margin: 0;
-  padding: 80px 104px;
+  padding: 80px 104px 58px;
 }
 
 .cards__nothing-found {
@@ -43,9 +43,10 @@
   padding: 0 104px;
   margin: 0;
   list-style-type: none;
-  gap: 24px;
+  gap: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 64px;
 }
 
 .cards__btn {
@@ -57,5 +58,30 @@
   left: 576px;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 400px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards__text {
+    padding: 32px 16px 58px;
+    font-family: Roboto Slab;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0px;
+  }
+
+  .cards__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards__btn {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+  }
 }

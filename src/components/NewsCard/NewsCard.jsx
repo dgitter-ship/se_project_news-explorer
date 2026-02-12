@@ -53,7 +53,16 @@ function NewsCard({
         className="card__image"
       />
       <div className="card__content">
-        <p className="card__date">{article.publishedAt}</p>
+        <p className="card__date">
+          {(() => {
+            const date = new Date(article.publishedAt);
+            return date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+          })()}
+        </p>
         <h2 className="card__title">{article.title}</h2>
         <p className="card__content">{article.content}</p>
         <p className="card__source">

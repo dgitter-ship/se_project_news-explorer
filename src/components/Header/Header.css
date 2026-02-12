@@ -1,16 +1,27 @@
 .header {
   display: flex;
-  gap: 765px;
+  justify-content: space-between;
   align-items: center;
   padding: 0 104px;
   color: white;
   border-bottom: 1px solid gray;
+  background: transparent;
+  z-index: 10;
+}
+
+.header--menu-open {
 }
 
 .header__logo {
   max-width: 200px;
   height: 24px;
   text-decoration: none;
+  font-family: Roboto Slab;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
 }
 
 .header__btns {
@@ -37,11 +48,18 @@
   border-color: #fff;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .header {
     gap: 147px;
     padding: 0 20px;
     justify-content: space-between;
+    position: sticky;
+  }
+
+  .header--menu-open {
+    background: #1a1b22 !important;
+    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
   }
 
   .header__logo {
