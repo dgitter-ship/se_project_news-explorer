@@ -18,7 +18,7 @@ const createMockResponse = (data, delay = 1000) => {
 };
 
 // Your stubbed signin function
-const signin = ({ email, password }) => {
+export const signin = ({ email, password }) => {
   // Instead of real fetch, return mock response
   return createMockResponse({
     token: "fake-jwt-token-12345",
@@ -27,7 +27,7 @@ const signin = ({ email, password }) => {
 };
 
 // Your stubbed signup function
-const signup = ({ name, avatar, email, password }) => {
+export const signup = ({ name, avatar, email, password }) => {
   return createMockResponse({
     user: { name, avatar, email, _id: "fake-user-id-456" },
   }).then(checkResponse);

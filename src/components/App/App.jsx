@@ -9,6 +9,7 @@ import SignIn from "../SignIn/SignIn";
 import SignUp from "../SignUp/SignUp";
 import { getNews } from "../../utils/newsApi";
 import SavedNews from "../SavedNews/SavedNews";
+import { signin, signup } from "../../utils/auth";
 
 function App() {
   const location = useLocation();
@@ -38,16 +39,33 @@ function App() {
     setUserData({ email: "", password: "", name: "" });
   };
 
-  const handleLogin = (userData) => {
-    setIsLoggedIn(true);
-    setUserData(userData);
-    closeActiveModal();
+  const handleLogin = (data) => {
+    signin(data)
+      .then((res) => {
+        setIsLoggedIn(true);
+        setUserData(res.user);
+        closeActiveModal();
+      })
+      .catch((err) => {
+        setErrorMessage(err);
+      });
   };
 
-  const handleSignUp = (signUpData) => {
-    setUserData({ email: signUpData.email, name: signUpData.name });
-    setIsLoggedIn(true);
-    closeActiveModal();
+  const handleSignUp = (data) => {
+    signup({
+      name: data.username || data.name,
+      avatar: "", // Add avatar if needed
+      email: data.email,
+      password: data.password,
+    })
+      .then((res) => {
+        setUserData(res.user);
+        setIsLoggedIn(true);
+        closeActiveModal();
+      })
+      .catch((err) => {
+        setErrorMessage(err);
+      });
   };
 
   const handleRemoveArticle = (article) => {

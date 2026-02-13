@@ -113,7 +113,7 @@
 }
 
 .navigation__signout-btn--saved {
-  color: #ffff;
+  color: black;
 }
 
 .navigation__signin-btn {
@@ -211,6 +211,7 @@
   .navigation__signout-btn {
     width: 100vw;
     height: 58px;
+    color: #fff;
   }
 
   .navigation__signin-btn {

@@ -55,14 +55,6 @@ function Main({
             </div>
           )}
 
-          {/* {!isLoading && !errorMessage && articles.length === 0 && (
-            <div className="cards__nothing-found">
-              <img src={notFoundImg} alt="Nothing Found Image" className="cards__nothing-found_img" />
-              <h2 className="cards__nothing-found_caption">Nothing found</h2>
-              <p className="cards__nothing-found_text">Sorry, but nothing matched your search terms.</p>
-            </div>
-          )} */}
-
           {!isLoading && !errorMessage && articles.length > 0 && (
             <>
               <ul className="cards__list">

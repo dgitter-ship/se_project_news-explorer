@@ -19,18 +19,6 @@ function SavedNews({
     const uniqueTerms = [...new Set(terms)];
 
     return <>{uniqueTerms.join(", ")}</>;
-
-    // savedArticles
-    //           .filter((item, index, self) => {
-    //             return self.indexOf(item) === index;
-    //           })
-    //           // get only unique items, no duplications
-    //           // if there are >2 items - render first two, and then render text "and n more"
-    //           // where n is an integer, items.length - 2
-    //           .map((item) => {
-    //             return item.searchTerm;
-    //           })
-    //           .join(", ")
   };
 
   return (
