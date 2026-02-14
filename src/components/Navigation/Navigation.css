@@ -90,7 +90,7 @@
 .navigation__saved-articles-btn--saved::after {
   content: "";
   position: absolute;
-  bottom: -26px;
+  bottom: -28px;
   left: 0;
   width: 100%;
   height: 3px;
