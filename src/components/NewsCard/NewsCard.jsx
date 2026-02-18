@@ -16,10 +16,6 @@ function NewsCard({
     return <div className="card__error">No article data available</div>;
   }
 
-  const handleDate = (article) => {
-    article.publishedAt.toISOString().split("T")[0];
-  };
-
   const handleSave = () => {
     console.log("Save button clicked for article:", article);
     onSaveArticle(article);

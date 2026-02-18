@@ -9,7 +9,7 @@ function SavedNews({
   userData,
   savedArticles,
   onRemoveArticle,
-  isSavedNewsPage,
+
   activeModal,
 }) {
   const [menuOpen, setMenuOpen] = useState(false);

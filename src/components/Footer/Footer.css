@@ -1,5 +1,7 @@
 .footer {
   display: flex;
+  position: relative;
+  z-index: 50;
 }
 
 .footer__text {

@@ -2,7 +2,7 @@ import "./Main.css";
 import notFoundImg from "../../assets/not-found.svg";
 import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
-import { defaultArticles } from "../../utils/constants";
+
 import NewsCard from "../NewsCard/NewsCard";
 import Preloader from "../Preloader/Preloader";
 import { useState } from "react";

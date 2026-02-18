@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
-import SearchForm from "../SearchForm/SearchForm";
+
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import SignIn from "../SignIn/SignIn";
