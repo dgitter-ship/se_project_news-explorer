@@ -4,11 +4,12 @@
   max-width: 1440px;
   margin: 0 auto;
   min-width: fit-content;
+  outline: 1px solid red;
 }
 
 @media screen and (max-width: 400px) {
   .page__content {
-    min-width: none;
+    min-width: initial;
   }
 }
 

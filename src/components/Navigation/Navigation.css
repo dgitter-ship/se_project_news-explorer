@@ -7,7 +7,7 @@
 
 .navigation__btns {
   display: flex;
-  gap: 16px;
+  gap: 33px;
   align-items: center;
   visibility: visible;
   justify-content: flex-start;
@@ -26,6 +26,7 @@
   color: white;
   border: none;
   position: relative;
+  width: 64px;
 }
 
 .navigation__home-btn::after {
@@ -174,7 +175,8 @@
   }
 
   .navigation__home-btn {
-    right: 200px;
+    height: 58px;
+    right: 150px;
   }
 
   .navigation__home-btn--saved {
@@ -186,7 +188,7 @@
   }
 
   .navigation__saved-articles-btn {
-    right: 170px;
+    right: 120px;
   }
 
   .navigation__saved-articles-btn--saved::after {
@@ -195,9 +197,10 @@
 
   .navigation__btns.navigation__btns--open {
     right: 0;
-    padding: 24px 16px;
+    padding: 16px 16px 24px;
     opacity: 1;
     pointer-events: auto;
+    box-sizing: border-box;
   }
 
   .navigation__hamburger {
@@ -209,13 +212,13 @@
   }
 
   .navigation__signout-btn {
-    width: 100vw;
+    width: 100%;
     height: 58px;
     color: #fff;
   }
 
   .navigation__signin-btn {
-    width: 100vw;
+    width: 100%;
     height: 58px;
   }
 
@@ -225,5 +228,6 @@
     background-color: transparent;
     border: none;
     display: flex;
+    padding: 0 12px 14px;
   }
 }

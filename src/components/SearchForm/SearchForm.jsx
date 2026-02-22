@@ -17,7 +17,15 @@ function SearchForm({ handleSearch, setSearchTerm }) {
           Whats going on in<br></br> the world?
         </h1>
         <h2 className="form__content">
-          Find the news on any topic and save them in your personal account
+          Find the news on any topic{" "}
+          <span className="form__span">
+            <br></br>
+          </span>{" "}
+          and save them in your personal{" "}
+          <span className="form__span">
+            <br></br>
+          </span>
+          account
         </h2>
         <form onSubmit={onSubmit} className="form__searchbar">
           <input

@@ -50,17 +50,43 @@ function Navigation({
                     Saved articles
                   </button>
                 </Link>
-                <button
-                  onClick={handleSignOut}
-                  className={`navigation__signout-btn ${isSavedNewsPage ? "navigation__signout-btn--saved" : ""}`}
-                >
-                  {userData.name}
-                  <img
-                    src={isSavedNewsPage ? logoutBlack : logoutIcon}
-                    alt="logout-icon"
-                    className="navigation__signout-logo"
-                  />
-                </button>
+                {menuOpen ? (
+                  <button
+                    onClick={handleSignOut}
+                    className={`navigation__signout-btn ${isSavedNewsPage ? "navigation__signout-btn--saved" : ""}`}
+                  >
+                    {userData.name}
+                    <img
+                      src={logoutIcon}
+                      alt="logout-icon"
+                      className="navigation__signout-logo"
+                    />
+                  </button>
+                ) : isLoggedIn && isSavedNewsPage ? (
+                  <button
+                    onClick={handleSignOut}
+                    className={`navigation__signout-btn navigation__signout-btn--saved`}
+                  >
+                    {userData.name}
+                    <img
+                      src={logoutBlack}
+                      alt="logout-icon"
+                      className="navigation__signout-logo"
+                    />
+                  </button>
+                ) : !isSavedNewsPage ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="navigation__signout-btn"
+                  >
+                    {userData.name}
+                    <img
+                      src={logoutIcon}
+                      alt="logout-icon"
+                      className="navigation__signout-logo"
+                    />
+                  </button>
+                ) : null}
               </>
             ) : (
               <button

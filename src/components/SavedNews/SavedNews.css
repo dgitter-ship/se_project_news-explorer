@@ -11,6 +11,9 @@
 .saved-news__header--menu-open {
   background: #1a1b22 !important;
   transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 50;
+  position: sticky;
+  top: 0;
 }
 
 .saved-news__logo {
@@ -71,7 +74,6 @@
     gap: 147px;
     padding: 0 20px;
     justify-content: space-between;
-    position: sticky;
   }
 
   .saved-news__logo {
@@ -91,11 +93,12 @@
   }
 
   .saved-news__list {
-    padding: 0 104px;
     margin: 0;
     list-style-type: none;
     gap: 24px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
   }
 }

@@ -53,14 +53,14 @@
     gap: 147px;
     padding: 0 20px;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
   }
 
   .header--menu-open {
     background: #1a1b22 !important;
     transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
+    position: sticky;
+    top: 0;
   }
 
   .header__logo {

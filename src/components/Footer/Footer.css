@@ -2,11 +2,13 @@
   display: flex;
   position: relative;
   z-index: 50;
+  justify-content: space-between;
+  padding: 32px 104px 26px;
 }
 
 .footer__text {
   margin: 0;
-  padding: 32px 540px 36px 104px;
+
   color: #b6bcbf;
   font-family: Roboto;
   font-weight: 400;
@@ -14,6 +16,10 @@
   white-space: nowrap;
   line-height: 22px;
   letter-spacing: 0px;
+}
+
+.footer__nav {
+  display: flex;
 }
 
 .footer__btns {
@@ -50,6 +56,7 @@
     flex-direction: column-reverse;
 
     gap: 16px;
+    padding: 20px 16px 0;
   }
 
   .footer__text {
@@ -58,6 +65,11 @@
     color: #b6bcbf;
   }
 
+  .footer__nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
   .footer__btns {
     padding: 0;
     gap: 16px;
@@ -70,6 +82,5 @@
     display: flex;
     justify-content: end;
     position: relative;
-    top: 39px;
   }
 }
