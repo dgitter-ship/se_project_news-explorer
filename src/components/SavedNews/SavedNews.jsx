@@ -2,7 +2,7 @@ import "./SavedNews.css";
 import Navigation from "../Navigation/Navigation";
 import NewsCard from "../NewsCard/NewsCard";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function SavedNews({
   isLoggedIn,
@@ -20,6 +20,19 @@ function SavedNews({
 
     return <>{uniqueTerms.join(", ")}</>;
   };
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        setMenuOpen(false);
+      }
+    }
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>

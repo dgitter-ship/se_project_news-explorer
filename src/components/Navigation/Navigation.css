@@ -157,7 +157,7 @@
 .navigation__btns--open {
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 627px) {
   .navigation__btns {
     position: fixed;
     right: -700px;
@@ -176,7 +176,6 @@
 
   .navigation__home-btn {
     height: 58px;
-    right: 150px;
   }
 
   .navigation__home-btn--saved {
@@ -188,7 +187,6 @@
   }
 
   .navigation__saved-articles-btn {
-    right: 120px;
   }
 
   .navigation__saved-articles-btn--saved::after {
@@ -201,6 +199,7 @@
     opacity: 1;
     pointer-events: auto;
     box-sizing: border-box;
+    align-items: start;
   }
 
   .navigation__hamburger {
