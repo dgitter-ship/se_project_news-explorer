@@ -60,7 +60,29 @@
   font-family: "Roboto";
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 1350px) {
+  .cards {
+    padding: 40px;
+  }
+
+  .cards__text {
+    font-size: 30px;
+    padding: 0 0 32px;
+  }
+
+  .cards__list {
+    padding: 0;
+    gap: 8px;
+    grid-template-columns: repeat(3, 228px);
+    justify-content: center;
+  }
+
+  .cards__btn {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 706px) {
   .cards {
     display: flex;
     flex-direction: column;

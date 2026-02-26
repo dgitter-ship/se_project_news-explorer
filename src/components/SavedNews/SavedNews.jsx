@@ -3,6 +3,7 @@ import Navigation from "../Navigation/Navigation";
 import NewsCard from "../NewsCard/NewsCard";
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function SavedNews({
   isLoggedIn,
@@ -39,11 +40,13 @@ function SavedNews({
       <header
         className={`saved-news__header${menuOpen ? " saved-news__header--menu-open" : ""}`}
       >
-        <h1
-          className={`saved-news__logo${menuOpen ? " saved-news__logo--menu-open" : ""}`}
-        >
-          NewsExplorer
-        </h1>
+        <Link to="/">
+          <h1
+            className={`saved-news__logo${menuOpen ? " saved-news__logo--menu-open" : ""}`}
+          >
+            NewsExplorer
+          </h1>
+        </Link>
         <Navigation
           isLoggedIn={isLoggedIn}
           userData={userData}

@@ -11,6 +11,9 @@
   visibility: hidden;
 }
 
+body.modal-static {
+  overflow: hidden;
+}
 .modal_opened {
   visibility: visible;
 }
@@ -117,7 +120,7 @@
   color: #2f71e5;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 706px) {
   .modal {
     top: 45px;
     bottom: initial;

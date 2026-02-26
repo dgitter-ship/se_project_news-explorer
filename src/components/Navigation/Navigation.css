@@ -157,7 +157,7 @@
 .navigation__btns--open {
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 706px) {
   .navigation__btns {
     position: fixed;
     right: -700px;

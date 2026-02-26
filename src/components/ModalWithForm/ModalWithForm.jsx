@@ -16,14 +16,21 @@ function ModalWithForm({
   const overlayRef = useRef(null);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      document.body.classList.remove("modal-static");
+      return;
+    }
+    document.body.classList.add("modal-static");
     const handleEsc = (e) => {
       if (e.key === "Escape") {
         onCloseClick();
       }
     };
     document.addEventListener("keydown", handleEsc);
-    return () => document.removeEventListener("keydown", handleEsc);
+    return () => {
+      document.body.classList.remove("modal-static");
+      document.removeEventListener("keydown", handleEsc);
+    };
   }, [isOpen, onCloseClick]);
 
   const handleOverlayClick = (e) => {

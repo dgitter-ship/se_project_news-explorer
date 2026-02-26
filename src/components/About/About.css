@@ -1,17 +1,19 @@
 .about__section {
-  height: 624px;
   display: flex;
 
   position: relative;
-  top: 80px;
+  background: snow;
+  gap: 56px;
 }
 
 .about__image {
   width: 464px;
   height: 464px;
-  padding: 80px 56px 80px 104px;
+
   border-radius: 100%;
   object-fit: cover;
+  display: flex;
+  flex: 0 0 464px;
 }
 
 .about__section-content {
@@ -22,7 +24,7 @@
 
 .about__section-title {
   margin: 0;
-  padding-top: 141px;
+
   font-family: Roboto Slab;
   font-weight: 400;
   font-size: 40px;
@@ -31,7 +33,6 @@
 }
 
 .about__section-text {
-  width: 600px;
   font-family: Roboto;
   font-weight: 400;
   font-size: 18px;
@@ -42,7 +43,26 @@
   margin: 0;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 1350px) {
+  .about__section {
+    padding: 40px 40px 61px;
+    gap: 32px;
+  }
+
+  .about__section-title {
+    padding: 0;
+  }
+
+  .about__image {
+    width: 232px;
+    height: 232px;
+    display: flex;
+    flex: 0 0 232px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 706px) {
   .about__section {
     flex-direction: column;
     min-height: 764px;
