@@ -52,6 +52,10 @@
   color: black;
 }
 
+.navigation__home-btn--saved:hover {
+  cursor: pointer;
+}
+
 .navigation__home-btn--saved::after {
   content: none;
 }

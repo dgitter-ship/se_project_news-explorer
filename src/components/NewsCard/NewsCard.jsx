@@ -43,11 +43,18 @@ function NewsCard({
           <img src={removeIcon} alt="Remove" />
         </button>
       ) : null}
-      <img
-        src={article.image || article.urlToImage}
-        alt="Article Image"
-        className="card__image"
-      />
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card__link"
+      >
+        <img
+          src={article.image || article.urlToImage}
+          alt="Article Image"
+          className="card__image"
+        />
+      </a>
       <div className="card__content">
         <p className="card__date">
           {(() => {
@@ -61,9 +68,16 @@ function NewsCard({
         </p>
         <h2 className="card__title">{article.title}</h2>
         <p className="card__content">{article.content}</p>
-        <p className="card__source">
-          {article.source?.name || "Unknown Source"}
-        </p>
+        <a
+          href={article.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card__link"
+        >
+          <p className="card__source">
+            {article.source?.name || "Unknown Source"}
+          </p>
+        </a>
       </div>
     </li>
   );

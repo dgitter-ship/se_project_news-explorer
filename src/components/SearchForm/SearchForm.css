@@ -44,6 +44,15 @@
   padding-left: 24px;
 }
 
+.form__input::placeholder {
+  color: #b6bcbf;
+  transition: color 0.2s;
+}
+
+.form__input:hover::placeholder {
+  color: #000;
+}
+
 .form__submit-btn {
   position: absolute;
   right: 0px;
@@ -53,6 +62,12 @@
   border-radius: 100px;
   color: #fff;
   font-size: 18px;
+}
+.form__submit-btn:hover {
+  cursor: pointer;
+}
+.form__submit-btn:active {
+  background: #2a65cc;
 }
 
 @media screen and (max-width: 1350px) {

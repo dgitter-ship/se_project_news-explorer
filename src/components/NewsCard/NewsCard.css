@@ -54,6 +54,10 @@
   letter-spacing: 0px;
 }
 
+.card__link {
+  text-decoration: none;
+}
+
 .card__source {
   font-family: Roboto Slab;
   font-weight: 700;

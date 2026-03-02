@@ -60,6 +60,11 @@
   font-family: "Roboto";
 }
 
+.cards__btn:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+
 @media screen and (max-width: 1350px) {
   .cards {
     padding: 40px;
